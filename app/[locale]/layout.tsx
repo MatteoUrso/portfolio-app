@@ -1,8 +1,9 @@
 import { LocalizedParams } from "./_types/params";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
+import { getLangDir } from "rtl-detect";
 
 import "@/app/globals.css";
 
@@ -18,8 +19,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// TODO: Implement Static Rendering
+// Enable static rendering
 // https://next-intl.dev/docs/getting-started/app-router/with-i18n-routing#static-rendering
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 type Props = {
   children: React.ReactNode;
@@ -33,16 +37,24 @@ export default async function RootLayout({
   const locale = (await params).locale;
 
   // Ensure that the incoming `locale` is valid
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
+
+  // Enable static rendering
+  // https://next-intl.dev/docs/getting-started/app-router/with-i18n-routing#static-rendering
+  setRequestLocale(locale);
 
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  // Get the direction of the language
+  const direction = getLangDir(locale);
+
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={direction}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
