@@ -1,3 +1,4 @@
+import { LocalizedParams } from "./_types/params";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -22,7 +23,7 @@ const geistMono = Geist_Mono({
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<LocalizedParams>;
 };
 
 export default async function RootLayout({

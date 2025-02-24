@@ -1,13 +1,20 @@
-import { useTranslations } from "next-intl";
+import { LocalizedParams } from "./_types/params";
+import { getTranslations } from "next-intl/server";
 
-import { Link } from "@/i18n/routing";
+type Props = {
+  params: Promise<LocalizedParams>;
+};
+
+export async function generateMetadata({ params }: Readonly<Props>) {
+  const locale = (await params).locale;
+
+  const t = await getTranslations({ locale, namespace: "HomePage.Metadata" });
+
+  return {
+    title: t("title"),
+  };
+}
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
-  return (
-    <div>
-      <h1>{t("title")}</h1>
-      <Link href="/about">{t("about")}</Link>
-    </div>
-  );
+  return <div></div>;
 }

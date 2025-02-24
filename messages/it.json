@@ -1,6 +1,7 @@
 {
   "HomePage": {
-    "title": "Ciao mondo!",
-    "about": "Vai alla pagina su di me"
+    "Metadata": {
+      "title": "Matteo Urso - Sviluppatore Frontend"
+    }
   }
 }
