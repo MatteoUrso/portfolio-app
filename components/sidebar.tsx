@@ -73,7 +73,7 @@ function SidebarHeader() {
   return (
     <div className="flex space-x-2">
       <Image
-        src="https://avatars.githubusercontent.com/u/124599?v=4"
+        src="/avatar.jpg"
         alt="Avatar"
         height="40"
         width="40"
