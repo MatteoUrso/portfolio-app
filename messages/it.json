@@ -1,4 +1,8 @@
 {
+  "Footer": {
+    "buildBy": "Sito sviluppato da Matteo Urso © {year}. Tutti i diritti riservati."
+  },
+
   "HomePage": {
     "Metadata": {
       "title": "Matteo Urso - Sviluppatore Frontend",

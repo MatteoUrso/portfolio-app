@@ -17,6 +17,7 @@ const eslintConfig = [
       quotes: ["error", "double"],
       "prefer-arrow-callback": "error",
       "prefer-template": "error",
+      // Avoid hardcoded labels
       "react/jsx-no-literals": "error",
       // Consistently import navigation APIs from `@/i18n/routing`
       "no-restricted-imports": [
