@@ -3,6 +3,16 @@
     "buildBy": "Sito sviluppato da Matteo Urso © {year}. Tutti i diritti riservati."
   },
 
+  "Sidebar": {
+    "Links": {
+      "home": "Home",
+      "about": "Chi sono",
+      "projects": "Progetti",
+      "contact": "Contatti"
+    },
+    "readResume": "Leggi il Curriculum"
+  },
+
   "HomePage": {
     "Metadata": {
       "title": "Matteo Urso - Sviluppatore Frontend",

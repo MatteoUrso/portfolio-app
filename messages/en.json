@@ -3,6 +3,16 @@
     "buildBy": "Website developed by Matteo Urso © {year}. All rights reserved."
   },
 
+  "Sidebar": {
+    "Links": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "readResume": "Read Resume"
+  },
+
   "HomePage": {
     "Metadata": {
       "title": "Matteo Urso - Frontend Developer",
