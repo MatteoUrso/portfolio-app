@@ -10,13 +10,13 @@
       "projects": "Progetti",
       "contact": "Contatti"
     },
+    "Socials": {
+      "headingTitle": "Socials",
+      "x": "X",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "job": "Sviluppatore Frontend",
     "readResume": "Leggi il Curriculum"
-  },
-
-  "HomePage": {
-    "Metadata": {
-      "title": "Matteo Urso - Sviluppatore Frontend",
-      "description": "Esplora il portfolio di Matteo Urso, sviluppatore frontend esperto in React, Next.js e applicazioni mobile con React Native ed Expo."
-    }
   }
 }

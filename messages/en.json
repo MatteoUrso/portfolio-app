@@ -4,19 +4,20 @@
   },
 
   "Sidebar": {
+    "Navigation": {},
     "Links": {
       "home": "Home",
       "about": "About",
       "projects": "Projects",
       "contact": "Contact"
     },
+    "Socials": {
+      "headingTitle": "Socials",
+      "x": "X",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "job": "Frontend Developer",
     "readResume": "Read Resume"
-  },
-
-  "HomePage": {
-    "Metadata": {
-      "title": "Matteo Urso - Frontend Developer",
-      "description": "Explore Matteo Urso's portfolio, a frontend developer skilled in React, Next.js, and mobile apps using React Native and Expo."
-    }
   }
 }
