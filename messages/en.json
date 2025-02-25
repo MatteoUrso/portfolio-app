@@ -1,23 +1,8 @@
 {
-  "Footer": {
-    "buildBy": "Website developed by Matteo Urso © {year}. All rights reserved."
-  },
-
-  "Sidebar": {
-    "Navigation": {},
-    "Links": {
-      "home": "Home",
-      "about": "About",
-      "projects": "Projects",
-      "contact": "Contact"
-    },
-    "Socials": {
-      "headingTitle": "Socials",
-      "x": "X",
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
-    },
-    "job": "Frontend Developer",
-    "readResume": "Read Resume"
+  "HomePage": {
+    "Metadata": {
+      "title": "Home Page",
+      "description": "This is the home page of the website"
+    }
   }
 }

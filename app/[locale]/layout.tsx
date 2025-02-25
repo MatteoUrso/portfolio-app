@@ -7,9 +7,6 @@ import { getLangDir } from "rtl-detect";
 
 import { cn } from "@/lib/utils";
 
-import { Footer } from "@/components/footer";
-import { Sidebar } from "@/components/sidebar";
-
 import "@/app/globals.css";
 
 import { routing } from "@/i18n/routing";
@@ -55,20 +52,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={direction}>
-      <body
-        className={cn(
-          inter.className,
-          "flex h-screen overflow-hidden bg-gray-100 antialiased"
-        )}
-      >
+      <body className={cn(inter.className, "h-screen w-full antialiased")}>
         <NextIntlClientProvider messages={messages}>
-          <Sidebar />
-          <div className="flex-1 overflow-y-auto bg-gray-100 lg:pl-2 lg:pt-2">
-            <div className="min-h-screen flex-1 overflow-y-auto border border-transparent bg-white lg:rounded-tl-xl lg:border-neutral-200">
-              {children}
-              <Footer />
-            </div>
-          </div>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

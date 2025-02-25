@@ -1,22 +1,8 @@
 {
-  "Footer": {
-    "buildBy": "Sito sviluppato da Matteo Urso © {year}. Tutti i diritti riservati."
-  },
-
-  "Sidebar": {
-    "Links": {
-      "home": "Home",
-      "about": "Chi sono",
-      "projects": "Progetti",
-      "contact": "Contatti"
-    },
-    "Socials": {
-      "headingTitle": "Socials",
-      "x": "X",
-      "github": "GitHub",
-      "linkedin": "LinkedIn"
-    },
-    "job": "Sviluppatore Frontend",
-    "readResume": "Leggi il Curriculum"
+  "HomePage": {
+    "Metadata": {
+      "title": "Pagina Principale",
+      "description": "Questa è la pagina principale del sito web"
+    }
   }
 }
