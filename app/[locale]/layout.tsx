@@ -1,3 +1,4 @@
+import { Header } from "./_components/header";
 import { LocalizedParams } from "./_types/params";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -6,6 +7,9 @@ import { notFound } from "next/navigation";
 import { getLangDir } from "rtl-detect";
 
 import { cn } from "@/lib/utils";
+
+import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "@/app/globals.css";
 
@@ -51,10 +55,24 @@ export default async function RootLayout({
   const direction = getLangDir(locale);
 
   return (
-    <html lang={locale} dir={direction}>
-      <body className={cn(inter.className, "h-screen w-full antialiased")}>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
+      <body
+        className={cn(
+          inter.className,
+          "bg-background h-screen w-full antialiased"
+        )}
+      >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            <ModeToggle />
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
