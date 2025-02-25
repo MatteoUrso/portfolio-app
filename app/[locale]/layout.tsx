@@ -1,4 +1,3 @@
-import { Header } from "./_components/header";
 import { LocalizedParams } from "./_types/params";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -8,7 +7,6 @@ import { getLangDir } from "rtl-detect";
 
 import { cn } from "@/lib/utils";
 
-import { ModeToggle } from "@/components/mode-toggle";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import "@/app/globals.css";
@@ -59,7 +57,7 @@ export default async function RootLayout({
       <body
         className={cn(
           inter.className,
-          "bg-background h-screen w-full antialiased"
+          "h-screen w-full bg-background antialiased"
         )}
       >
         <NextIntlClientProvider messages={messages}>
@@ -69,8 +67,6 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Header />
-            <ModeToggle />
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
